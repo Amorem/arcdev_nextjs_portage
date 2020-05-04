@@ -17,6 +17,7 @@ import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import Hidden from "@material-ui/core/Hidden";
 
 function ElevationScroll({ children }) {
   const trigger = useScrollTrigger({
@@ -196,7 +197,9 @@ export default function Header(props) {
           }
           break;
         case "/estimate":
-          props.setValue(false);
+          if (props.value !== false) {
+            props.setValue(false);
+          }
           break;
         default:
           break;
@@ -347,7 +350,8 @@ export default function Header(props) {
                 alt="company logo"
               />
             </Button>
-            {matches ? drawer : tabs}
+            <Hidden mdDown>{tabs}</Hidden>
+            <Hidden lgUp>{drawer}</Hidden>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
