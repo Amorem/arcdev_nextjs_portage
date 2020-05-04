@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   revolutionBackground: {
-    backgroundImage: url("/assets/repeatingBackground.svg"),
+    backgroundImage: `url("/assets/repeatingBackground.svg")`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   infoBackground: {
-    backgroundImage: url("/assets/infoBackground.svg"),
+    backgroundImage: `url("/assets/infoBackground.svg")`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -228,7 +228,7 @@ export default function LandingPage(props) {
           <Grid item>
             <img
               alt="Custom Software Icon"
-              src="/assets/customSoftwareIcon.svg"
+              src="/assets/customsoftware.svg"
               className={classes.icon}
             />
           </Grid>
@@ -277,7 +277,7 @@ export default function LandingPage(props) {
           <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
             <img
               alt="Mobile App Icon"
-              src="/assets/mobileAppsIcon.svg"
+              src="/assets/mobileIcon.svg"
               className={classes.icon}
             />
           </Grid>
@@ -326,7 +326,7 @@ export default function LandingPage(props) {
           <Grid item>
             <img
               alt="Websites Icon"
-              src="/assets/websitesIcon.svg"
+              src="/assets/websiteIcon.svg"
               className={classes.icon}
             />
           </Grid>

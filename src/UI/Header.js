@@ -6,7 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
+import Link from "../Link";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -217,7 +217,7 @@ export default function Header(props) {
             key={`${route}${index}`}
             className={classes.tab}
             component={Link}
-            to={route.link}
+            href={route.link}
             label={route.name}
             aria-owns={route.ariaOwns}
             aria-haspopup={route.ariaPopup}
@@ -230,7 +230,7 @@ export default function Header(props) {
         variant="contained"
         color="secondary"
         component={Link}
-        to="/estimate"
+        href="/estimate"
         onClick={() => {
           props.setValue(false);
         }}
@@ -252,7 +252,7 @@ export default function Header(props) {
           <MenuItem
             key={`${option.link}${index}`}
             component={Link}
-            to={option.link}
+            href={option.link}
             classes={{ root: classes.menuItem }}
             onClick={(event) => {
               handleMenuItemClick(event, index);
@@ -286,7 +286,7 @@ export default function Header(props) {
               divider
               button
               component={Link}
-              to={route.link}
+              href={route.link}
               selected={props.value === route.activeIndex}
               onClick={() => {
                 setOpenDrawer(false);
@@ -312,7 +312,7 @@ export default function Header(props) {
             divider
             button
             component={Link}
-            to="/estimate"
+            href="/estimate"
             selected={props.value === 5}
           >
             <ListItemText disableTypography>Free Estimate</ListItemText>
@@ -337,7 +337,7 @@ export default function Header(props) {
             <Button
               disableRipple
               component={Link}
-              to="/"
+              href="/"
               className={classes.logoContainer}
               onClick={() => props.setValue(0)}
             >
